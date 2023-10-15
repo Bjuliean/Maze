@@ -130,7 +130,7 @@ void view::BuildRoute() {
 }
 
 void view::on_pushButton_generate_clicked() {
-  controller_.CreateMaze(ui->spinBox_rx->value(), ui->spinBox_ry->value());
+  controller_.CreateMaze(ui->spinBox_ry->value(), ui->spinBox_rx->value());
   Draw();
 }
 

@@ -1,4 +1,4 @@
-digraph "/home/julieanb/WORKSPACE/ghub/Maze/src/model/maze"
+digraph "/home/julieanb/WORKSPACE/algos/A1_Maze-1/src/model/maze"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
