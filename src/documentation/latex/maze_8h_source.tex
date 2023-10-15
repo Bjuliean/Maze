@@ -1,0 +1,205 @@
+\hypertarget{maze_8h_source}{}\doxysection{maze.\+h}
+\label{maze_8h_source}\index{/home/julieanb/WORKSPACE/ghub/Maze/src/model/maze/maze.h@{/home/julieanb/WORKSPACE/ghub/Maze/src/model/maze/maze.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAZE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAZE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../data/matrix.hpp"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }s21 \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{struct }\mbox{\hyperlink{structs21_1_1Cell}{Cell}} \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{structs21_1_1Cell}{Cell}}(\textcolor{keywordtype}{size\_t} sets = 0, \textcolor{keywordtype}{bool} rw = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} bw = \textcolor{keyword}{false})}
+\DoxyCodeLine{15         : sets\_(sets)}
+\DoxyCodeLine{16         , right\_wall\_(rw)}
+\DoxyCodeLine{17         , bottom\_wall\_(bw)}
+\DoxyCodeLine{18         , part\_of\_path\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{19         , path\_val\_(-\/1)}
+\DoxyCodeLine{20         , start\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{21         , finish\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{structs21_1_1Cell}{Cell}}(\textcolor{keyword}{const} \mbox{\hyperlink{structs21_1_1Cell}{Cell}}\& other)}
+\DoxyCodeLine{26         : sets\_(other.sets\_)}
+\DoxyCodeLine{27         , right\_wall\_(other.right\_wall\_)}
+\DoxyCodeLine{28         , bottom\_wall\_(other.bottom\_wall\_)}
+\DoxyCodeLine{29         , part\_of\_path\_(other.part\_of\_path\_)}
+\DoxyCodeLine{30         , path\_val\_(other.path\_val\_)}
+\DoxyCodeLine{31         , start\_(other.start\_)}
+\DoxyCodeLine{32         , finish\_(other.finish\_)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{structs21_1_1Cell}{\string~Cell}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} SetRightWall() \{ right\_wall\_ = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} SetBottomWall() \{ bottom\_wall\_ = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} SetPathCell() \{ part\_of\_path\_ = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} RemoveRightWall() \{ right\_wall\_ = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} RemoveBottomWall() \{ bottom\_wall\_ = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} RemovePathCell() \{ part\_of\_path\_ = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} Start() \{ }
+\DoxyCodeLine{51         start\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{52         part\_of\_path\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} Finish() \{ }
+\DoxyCodeLine{56         finish\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{57         part\_of\_path\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} RemoveAllWalls() \{}
+\DoxyCodeLine{61         right\_wall\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{62         bottom\_wall\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keyword}{friend} std::ostream\& operator<<(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{structs21_1_1Cell}{Cell}} cell) \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} os << cell.sets\_;}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{size\_t} sets\_;}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} right\_wall\_;}
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} bottom\_wall\_;}
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} part\_of\_path\_;}
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} path\_val\_;}
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} start\_;}
+\DoxyCodeLine{75     \textcolor{keywordtype}{bool} finish\_;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \}; \textcolor{comment}{// Cell}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{82 \textcolor{keyword}{struct }\mbox{\hyperlink{structs21_1_1PathSignCell}{PathSignCell}} \{}
+\DoxyCodeLine{83     \mbox{\hyperlink{structs21_1_1PathSignCell}{PathSignCell}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \mbox{\hyperlink{structs21_1_1PathSignCell}{PathSignCell}}(\mbox{\hyperlink{structs21_1_1Cell}{Cell}}* cell, \textcolor{keywordtype}{size\_t} ii = 1, \textcolor{keywordtype}{size\_t} zi = 1)}
+\DoxyCodeLine{86         : pcell\_(cell)}
+\DoxyCodeLine{87         , iindx\_(ii)}
+\DoxyCodeLine{88         , zindx\_(zi)}
+\DoxyCodeLine{89     \{}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \mbox{\hyperlink{structs21_1_1PathSignCell}{\string~PathSignCell}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \mbox{\hyperlink{structs21_1_1Cell}{Cell}}* pcell\_;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{size\_t} iindx\_;}
+\DoxyCodeLine{96     \textcolor{keywordtype}{size\_t} zindx\_;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \}; \textcolor{comment}{// PathSignCell}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104 \textcolor{keyword}{class }\mbox{\hyperlink{classs21_1_1Maze}{Maze}} \{}
+\DoxyCodeLine{105 \textcolor{keyword}{public}:}
+\DoxyCodeLine{106     \mbox{\hyperlink{classs21_1_1Maze}{Maze}}(\textcolor{keywordtype}{size\_t} width = 1, \textcolor{keywordtype}{size\_t} height = 1)}
+\DoxyCodeLine{107         : matrix\_result\_(0, 0)}
+\DoxyCodeLine{108         , matrix\_right\_walls\_(0, 0)}
+\DoxyCodeLine{109         , matrix\_bottom\_walls\_(0, 0)}
+\DoxyCodeLine{110         , width\_(width)}
+\DoxyCodeLine{111         , height\_(height)}
+\DoxyCodeLine{112         , is\_loaded\_maze\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{113         , unique\_indx\_(0)}
+\DoxyCodeLine{114         , start\_cell\_()}
+\DoxyCodeLine{115         , finish\_cell\_()}
+\DoxyCodeLine{116         , path\_arr\_()}
+\DoxyCodeLine{117         , maze\_generated\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119         matrix\_result\_.SetColsSize(width\_);}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \mbox{\hyperlink{classs21_1_1Maze}{\string~Maze}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{127     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a58a43148b9ae09e0e64b588cdbef7971}{SetWidth}}(\textcolor{keywordtype}{size\_t} val) \{ }
+\DoxyCodeLine{128         width\_ = val;}
+\DoxyCodeLine{129         matrix\_result\_.SetColsSize(width\_);}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{135     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a28c16c283da68e7aec7eb2764d520f7f}{SetHeight}}(\textcolor{keywordtype}{size\_t} val) \{ height\_ = val; \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{140     \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classs21_1_1Maze_aa4ae85f1dcae7fd1c23a6cfad397d737}{GetWidth}}() const noexcept \{ \textcolor{keywordflow}{return} width\_ -\/ 1; \}}
+\DoxyCodeLine{141     }
+\DoxyCodeLine{145     \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classs21_1_1Maze_a52fd45bb7ff9cbb450b389235dc238e6}{GetHeight}}() const noexcept \{ \textcolor{keywordflow}{return} height\_ -\/ 1; \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{150     \textcolor{keyword}{inline} \mbox{\hyperlink{structs21_1_1Cell}{Cell}}\& \mbox{\hyperlink{classs21_1_1Maze_a0b015c5851331fce33ce58d8574340fe}{GetCell}}(\textcolor{keywordtype}{size\_t} i, \textcolor{keywordtype}{size\_t} z) \{ \textcolor{keywordflow}{return} matrix\_result\_(i, z); \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{155     \textcolor{keyword}{inline} std::vector<PathSignCell>\& \mbox{\hyperlink{classs21_1_1Maze_a553a7f167bd3ab8ca31fe38955577409}{PathCellArray}}() \{ \textcolor{keywordflow}{return} path\_arr\_; \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a038cb854cdb8f41e5a8993448fecb2c3}{Navigate}}(\textcolor{keywordtype}{size\_t} si, \textcolor{keywordtype}{size\_t} sz, \textcolor{keywordtype}{size\_t} fi, \textcolor{keywordtype}{size\_t} fz);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{165     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_aa0150ca32d88a4e5d93a7f2e151cc37f}{GenerateMaze}}();}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{170     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a52c154600418b882fb6bebc20adf64f9}{Clear}}();}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{175     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a832e964a0f7d6a7beff350e729f099ad}{PathfinderClear}}();}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{180     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a6823f317d1519c8ca65d7e66a1eb4f8f}{SaveMaze}}(std::string path);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{185     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Maze_a1d7f0ebc736d02bb2c21c66fb6436438}{LoadMaze}}(std::string path);}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{190     \textcolor{keyword}{inline} Matrix<Cell>\& \mbox{\hyperlink{classs21_1_1Maze_af093df2c20b32d727bba2cb281139e6e}{MatrixResult}}() \{ \textcolor{keywordflow}{return} matrix\_result\_; \}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{195     \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classs21_1_1Maze_abd4be9b153f9a4d82ede596d96ea3812}{MazeGenerated}}() const noexcept \{ \textcolor{keywordflow}{return} maze\_generated\_; \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{200     \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classs21_1_1Maze_a752408cf2ccc4ecaed979553828be3dc}{MazeLoaded}}() const noexcept \{ \textcolor{keywordflow}{return} is\_loaded\_maze\_; \}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 \textcolor{keyword}{private}:}
+\DoxyCodeLine{203     Matrix<Cell> matrix\_result\_;}
+\DoxyCodeLine{204     Matrix<size\_t> matrix\_right\_walls\_;}
+\DoxyCodeLine{205     Matrix<size\_t> matrix\_bottom\_walls\_;}
+\DoxyCodeLine{206     \textcolor{keywordtype}{size\_t} width\_;}
+\DoxyCodeLine{207     \textcolor{keywordtype}{size\_t} height\_;}
+\DoxyCodeLine{208     \textcolor{keywordtype}{bool} is\_loaded\_maze\_;}
+\DoxyCodeLine{209     \textcolor{keywordtype}{size\_t} unique\_indx\_;}
+\DoxyCodeLine{210     \mbox{\hyperlink{structs21_1_1PathSignCell}{PathSignCell}} start\_cell\_;}
+\DoxyCodeLine{211     \mbox{\hyperlink{structs21_1_1PathSignCell}{PathSignCell}} finish\_cell\_;}
+\DoxyCodeLine{212     std::vector<PathSignCell> path\_arr\_;}
+\DoxyCodeLine{213     \textcolor{keywordtype}{bool} maze\_generated\_;}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215     \textcolor{keywordtype}{void} RandomizeWalls();}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217     \textcolor{keywordtype}{void} HandleRightWalls(std::vector<Cell>\& vec, \textcolor{keywordtype}{size\_t} row);}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \textcolor{keywordtype}{void} HandleBottomWalls(std::vector<Cell>\& vec, \textcolor{keywordtype}{size\_t} row);}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221     \textcolor{keywordtype}{void} CombineSets(std::vector<Cell>\& vec, \textcolor{keywordtype}{size\_t} val, \textcolor{keywordtype}{size\_t} whichsets);}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223     \textcolor{keywordtype}{bool} BottomWallPossible(std::vector<Cell>\& vec, \textcolor{keywordtype}{size\_t} sets);}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225     \textcolor{keywordtype}{void} PrepareProcessingLine(std::vector<Cell>\& vec);}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227     \textcolor{keywordtype}{void} HandleLastLine();}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229     \textcolor{keywordtype}{void} ParseMatrixSize(std::string str);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     \textcolor{keywordtype}{void} ParseRightWallMatrix(std::string str);}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233     \textcolor{keywordtype}{void} ParseBottomWallMatrix(std::string str);}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     \textcolor{keywordtype}{void} SetBoundaries();}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237     \textcolor{keywordtype}{void} SetStartCell(\textcolor{keywordtype}{size\_t} i, \textcolor{keywordtype}{size\_t} z);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239     \textcolor{keywordtype}{void} SetFinishCell(\textcolor{keywordtype}{size\_t} i, \textcolor{keywordtype}{size\_t} z);}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241     \textcolor{keywordtype}{void} CalculatePathVal(\textcolor{keywordtype}{size\_t} i, \textcolor{keywordtype}{size\_t} z);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243     \textcolor{keywordtype}{void} ChooseRoute();}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245     \textcolor{keywordtype}{bool} CorrectIndx(\textcolor{keywordtype}{size\_t} i, \textcolor{keywordtype}{size\_t} z);}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247     \textcolor{keywordtype}{bool} SuccessfulParsing();}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 \}; \textcolor{comment}{// Maze}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \}; \textcolor{comment}{// namespace s21}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAZE\_H}}
+
+\end{DoxyCode}

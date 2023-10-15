@@ -1,0 +1,149 @@
+\hypertarget{classs21_1_1Maze}{}\doxysection{s21\+::Maze Class Reference}
+\label{classs21_1_1Maze}\index{s21::Maze@{s21::Maze}}
+
+
+The class responsible for working with the maze.  
+
+
+
+
+{\ttfamily \#include $<$maze.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classs21_1_1Maze_a26d6b8999532a2f85243aea2a4bc8988}\label{classs21_1_1Maze_a26d6b8999532a2f85243aea2a4bc8988}} 
+{\bfseries Maze} (size\+\_\+t width=1, size\+\_\+t height=1)
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a58a43148b9ae09e0e64b588cdbef7971}{Set\+Width}} (size\+\_\+t val)
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a28c16c283da68e7aec7eb2764d520f7f}{Set\+Height}} (size\+\_\+t val)
+\item 
+size\+\_\+t \mbox{\hyperlink{classs21_1_1Maze_aa4ae85f1dcae7fd1c23a6cfad397d737}{Get\+Width}} () const noexcept
+\item 
+size\+\_\+t \mbox{\hyperlink{classs21_1_1Maze_a52fd45bb7ff9cbb450b389235dc238e6}{Get\+Height}} () const noexcept
+\item 
+\mbox{\hyperlink{structs21_1_1Cell}{Cell}} \& \mbox{\hyperlink{classs21_1_1Maze_a0b015c5851331fce33ce58d8574340fe}{Get\+Cell}} (size\+\_\+t i, size\+\_\+t z)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structs21_1_1PathSignCell}{Path\+Sign\+Cell}} $>$ \& \mbox{\hyperlink{classs21_1_1Maze_a553a7f167bd3ab8ca31fe38955577409}{Path\+Cell\+Array}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a038cb854cdb8f41e5a8993448fecb2c3}{Navigate}} (size\+\_\+t si, size\+\_\+t sz, size\+\_\+t fi, size\+\_\+t fz)
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_aa0150ca32d88a4e5d93a7f2e151cc37f}{Generate\+Maze}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a52c154600418b882fb6bebc20adf64f9}{Clear}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a832e964a0f7d6a7beff350e729f099ad}{Pathfinder\+Clear}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a6823f317d1519c8ca65d7e66a1eb4f8f}{Save\+Maze}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classs21_1_1Maze_a1d7f0ebc736d02bb2c21c66fb6436438}{Load\+Maze}} (std\+::string path)
+\item 
+Matrix$<$ \mbox{\hyperlink{structs21_1_1Cell}{Cell}} $>$ \& \mbox{\hyperlink{classs21_1_1Maze_af093df2c20b32d727bba2cb281139e6e}{Matrix\+Result}} ()
+\item 
+bool \mbox{\hyperlink{classs21_1_1Maze_abd4be9b153f9a4d82ede596d96ea3812}{Maze\+Generated}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classs21_1_1Maze_a752408cf2ccc4ecaed979553828be3dc}{Maze\+Loaded}} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class responsible for working with the maze. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classs21_1_1Maze_a52c154600418b882fb6bebc20adf64f9}\label{classs21_1_1Maze_a52c154600418b882fb6bebc20adf64f9}} 
+\index{s21::Maze@{s21::Maze}!Clear@{Clear}}
+\index{Clear@{Clear}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleaning matrices. \mbox{\Hypertarget{classs21_1_1Maze_aa0150ca32d88a4e5d93a7f2e151cc37f}\label{classs21_1_1Maze_aa0150ca32d88a4e5d93a7f2e151cc37f}} 
+\index{s21::Maze@{s21::Maze}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Generate\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The method responsible for generating maze. \mbox{\Hypertarget{classs21_1_1Maze_a0b015c5851331fce33ce58d8574340fe}\label{classs21_1_1Maze_a0b015c5851331fce33ce58d8574340fe}} 
+\index{s21::Maze@{s21::Maze}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structs21_1_1Cell}{Cell}} \& s21\+::\+Maze\+::\+Get\+Cell (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i,  }\item[{size\+\_\+t}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to a specific cell of the maze. \mbox{\Hypertarget{classs21_1_1Maze_a52fd45bb7ff9cbb450b389235dc238e6}\label{classs21_1_1Maze_a52fd45bb7ff9cbb450b389235dc238e6}} 
+\index{s21::Maze@{s21::Maze}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily size\+\_\+t s21\+::\+Maze\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Access to maze heigth. \mbox{\Hypertarget{classs21_1_1Maze_aa4ae85f1dcae7fd1c23a6cfad397d737}\label{classs21_1_1Maze_aa4ae85f1dcae7fd1c23a6cfad397d737}} 
+\index{s21::Maze@{s21::Maze}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily size\+\_\+t s21\+::\+Maze\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Access to maze width. \mbox{\Hypertarget{classs21_1_1Maze_a1d7f0ebc736d02bb2c21c66fb6436438}\label{classs21_1_1Maze_a1d7f0ebc736d02bb2c21c66fb6436438}} 
+\index{s21::Maze@{s21::Maze}!LoadMaze@{LoadMaze}}
+\index{LoadMaze@{LoadMaze}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{LoadMaze()}{LoadMaze()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Load\+Maze (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Loading maze along a given path. \mbox{\Hypertarget{classs21_1_1Maze_af093df2c20b32d727bba2cb281139e6e}\label{classs21_1_1Maze_af093df2c20b32d727bba2cb281139e6e}} 
+\index{s21::Maze@{s21::Maze}!MatrixResult@{MatrixResult}}
+\index{MatrixResult@{MatrixResult}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{MatrixResult()}{MatrixResult()}}
+{\footnotesize\ttfamily Matrix$<$ \mbox{\hyperlink{structs21_1_1Cell}{Cell}} $>$ \& s21\+::\+Maze\+::\+Matrix\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to the final maze matrix. \mbox{\Hypertarget{classs21_1_1Maze_abd4be9b153f9a4d82ede596d96ea3812}\label{classs21_1_1Maze_abd4be9b153f9a4d82ede596d96ea3812}} 
+\index{s21::Maze@{s21::Maze}!MazeGenerated@{MazeGenerated}}
+\index{MazeGenerated@{MazeGenerated}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{MazeGenerated()}{MazeGenerated()}}
+{\footnotesize\ttfamily bool s21\+::\+Maze\+::\+Maze\+Generated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Was it possible to generate maze. \mbox{\Hypertarget{classs21_1_1Maze_a752408cf2ccc4ecaed979553828be3dc}\label{classs21_1_1Maze_a752408cf2ccc4ecaed979553828be3dc}} 
+\index{s21::Maze@{s21::Maze}!MazeLoaded@{MazeLoaded}}
+\index{MazeLoaded@{MazeLoaded}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{MazeLoaded()}{MazeLoaded()}}
+{\footnotesize\ttfamily bool s21\+::\+Maze\+::\+Maze\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Was it possible to load maze from file. \mbox{\Hypertarget{classs21_1_1Maze_a038cb854cdb8f41e5a8993448fecb2c3}\label{classs21_1_1Maze_a038cb854cdb8f41e5a8993448fecb2c3}} 
+\index{s21::Maze@{s21::Maze}!Navigate@{Navigate}}
+\index{Navigate@{Navigate}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{Navigate()}{Navigate()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Navigate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{si,  }\item[{size\+\_\+t}]{sz,  }\item[{size\+\_\+t}]{fi,  }\item[{size\+\_\+t}]{fz }\end{DoxyParamCaption})}
+
+A method responsible for constructing a route according to given coordinates. \mbox{\Hypertarget{classs21_1_1Maze_a553a7f167bd3ab8ca31fe38955577409}\label{classs21_1_1Maze_a553a7f167bd3ab8ca31fe38955577409}} 
+\index{s21::Maze@{s21::Maze}!PathCellArray@{PathCellArray}}
+\index{PathCellArray@{PathCellArray}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{PathCellArray()}{PathCellArray()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structs21_1_1PathSignCell}{Path\+Sign\+Cell}} $>$ \& s21\+::\+Maze\+::\+Path\+Cell\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to a vector containing all the cells that belong to the constructed route. \mbox{\Hypertarget{classs21_1_1Maze_a832e964a0f7d6a7beff350e729f099ad}\label{classs21_1_1Maze_a832e964a0f7d6a7beff350e729f099ad}} 
+\index{s21::Maze@{s21::Maze}!PathfinderClear@{PathfinderClear}}
+\index{PathfinderClear@{PathfinderClear}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{PathfinderClear()}{PathfinderClear()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Pathfinder\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleaning up path-\/building data. \mbox{\Hypertarget{classs21_1_1Maze_a6823f317d1519c8ca65d7e66a1eb4f8f}\label{classs21_1_1Maze_a6823f317d1519c8ca65d7e66a1eb4f8f}} 
+\index{s21::Maze@{s21::Maze}!SaveMaze@{SaveMaze}}
+\index{SaveMaze@{SaveMaze}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{SaveMaze()}{SaveMaze()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Save\+Maze (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Save the generated maze to a file at the specified path. \mbox{\Hypertarget{classs21_1_1Maze_a28c16c283da68e7aec7eb2764d520f7f}\label{classs21_1_1Maze_a28c16c283da68e7aec7eb2764d520f7f}} 
+\index{s21::Maze@{s21::Maze}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the given height to the maze. \mbox{\Hypertarget{classs21_1_1Maze_a58a43148b9ae09e0e64b588cdbef7971}\label{classs21_1_1Maze_a58a43148b9ae09e0e64b588cdbef7971}} 
+\index{s21::Maze@{s21::Maze}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!s21::Maze@{s21::Maze}}
+\doxysubsubsection{\texorpdfstring{SetWidth()}{SetWidth()}}
+{\footnotesize\ttfamily void s21\+::\+Maze\+::\+Set\+Width (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the given width to the maze, sets the given width to the matrices of the maze. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/model/maze/maze.\+h\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/model/maze/maze.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+digraph "/home/julieanb/WORKSPACE/ghub/Maze/src/view/mainwindow"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_b2f003339c516cc00c8cadcafbe82f13 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="view", fontname="Helvetica", fontsize="10", URL="dir_b2f003339c516cc00c8cadcafbe82f13.html"]
+  dir_1b67ee9bb4629f20e6a5f6610fee9189 [shape=box, label="mainwindow", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_1b67ee9bb4629f20e6a5f6610fee9189.html"];
+  }
+}

@@ -1,0 +1,47 @@
+\hypertarget{model_8h_source}{}\doxysection{model.\+h}
+\label{model_8h_source}\index{/home/julieanb/WORKSPACE/ghub/Maze/src/model/model.h@{/home/julieanb/WORKSPACE/ghub/Maze/src/model/model.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MODEL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MODEL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}maze/maze.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }s21 \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classs21_1_1Model}{Model}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classs21_1_1Model}{Model}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{classs21_1_1Model}{\string~Model}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Model_a870eff306df9ca6c6eb1e1165eef1e8f}{CreateMaze}}(\textcolor{keywordtype}{size\_t} height, \textcolor{keywordtype}{size\_t} width);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Model_a870eff306df9ca6c6eb1e1165eef1e8f}{CreateMaze}}(std::string path);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Model_a1ae29a7b82d82606f9c79c7525089782}{BuildRoute}}(\textcolor{keywordtype}{size\_t} start\_cell\_y, \textcolor{keywordtype}{size\_t} start\_cell\_x, \textcolor{keywordtype}{size\_t} finish\_cell\_y, \textcolor{keywordtype}{size\_t} finish\_cell\_x);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Model_afac1d659d51968f20aedc7d76e2b91b4}{SaveMaze}}(std::string path);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classs21_1_1Model_a2a260ece16e929becb2de3b055a7bc08}{MazeHeight}}() \{ \textcolor{keywordflow}{return} maze\_.\mbox{\hyperlink{classs21_1_1Maze_a52fd45bb7ff9cbb450b389235dc238e6}{GetHeight}}(); \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keyword}{inline} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classs21_1_1Model_a4ae3c09c3d330f45cb989aa188267cdc}{MazeWidth}}() \{ \textcolor{keywordflow}{return} maze\_.\mbox{\hyperlink{classs21_1_1Maze_aa4ae85f1dcae7fd1c23a6cfad397d737}{GetWidth}}(); \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keyword}{inline} Matrix<Cell>\& \mbox{\hyperlink{classs21_1_1Model_a3b2e8adb6bdd333bf9bf52396b14bb84}{MazeMatrix}}() \{ \textcolor{keywordflow}{return} maze\_.\mbox{\hyperlink{classs21_1_1Maze_af093df2c20b32d727bba2cb281139e6e}{MatrixResult}}(); \}}
+\DoxyCodeLine{51     }
+\DoxyCodeLine{55     \textcolor{keyword}{inline} std::vector<PathSignCell>\& \mbox{\hyperlink{classs21_1_1Model_a9810bc4464ae7925ad6adb20a44d5f50}{PathCellArray}}() \{ \textcolor{keywordflow}{return} maze\_.\mbox{\hyperlink{classs21_1_1Maze_a553a7f167bd3ab8ca31fe38955577409}{PathCellArray}}(); \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60     \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classs21_1_1Model_a963179998d26e60ebd63bbdcde378477}{MazeGenerated}}() const noexcept \{ \textcolor{keywordflow}{return} maze\_.\mbox{\hyperlink{classs21_1_1Maze_abd4be9b153f9a4d82ede596d96ea3812}{MazeGenerated}}(); \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classs21_1_1Model_acdea88703c5efcc187e2b59d73239c6c}{Clear}}() \{ maze\_.\mbox{\hyperlink{classs21_1_1Maze_a52c154600418b882fb6bebc20adf64f9}{Clear}}(); \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{68     \mbox{\hyperlink{classs21_1_1Maze}{Maze}} maze\_;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \}; \textcolor{comment}{// Model}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \}; \textcolor{comment}{// namespace s21}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MODEL\_H}}
+
+\end{DoxyCode}

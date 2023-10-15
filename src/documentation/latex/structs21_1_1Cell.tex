@@ -1,0 +1,85 @@
+\hypertarget{structs21_1_1Cell}{}\doxysection{s21\+::Cell Struct Reference}
+\label{structs21_1_1Cell}\index{s21::Cell@{s21::Cell}}
+
+
+\mbox{\hyperlink{classs21_1_1Maze}{Maze}} cell structure.  
+
+
+
+
+{\ttfamily \#include $<$maze.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a148ef91b6563ff23aaa9c191c009c7e7}\label{structs21_1_1Cell_a148ef91b6563ff23aaa9c191c009c7e7}} 
+{\bfseries Cell} (size\+\_\+t sets=0, bool rw=false, bool bw=false)
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a6da147a65da57aefc04fd7ee2ec0ebbe}\label{structs21_1_1Cell_a6da147a65da57aefc04fd7ee2ec0ebbe}} 
+{\bfseries Cell} (const \mbox{\hyperlink{structs21_1_1Cell}{Cell}} \&other)
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a241693d3c31261d4d5cea997c60d81f3}\label{structs21_1_1Cell_a241693d3c31261d4d5cea997c60d81f3}} 
+void {\bfseries Set\+Right\+Wall} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a1f4dd8ecfd8561ac25fee3985e265ad0}\label{structs21_1_1Cell_a1f4dd8ecfd8561ac25fee3985e265ad0}} 
+void {\bfseries Set\+Bottom\+Wall} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a1b89a4ff3719afeac07522c0e2d0937f}\label{structs21_1_1Cell_a1b89a4ff3719afeac07522c0e2d0937f}} 
+void {\bfseries Set\+Path\+Cell} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a65cf285d6ab5c11dcd48ee36d37a0e09}\label{structs21_1_1Cell_a65cf285d6ab5c11dcd48ee36d37a0e09}} 
+void {\bfseries Remove\+Right\+Wall} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a030200ae42536dc51a7f31a382e91778}\label{structs21_1_1Cell_a030200ae42536dc51a7f31a382e91778}} 
+void {\bfseries Remove\+Bottom\+Wall} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a117ec89a18b799a955c40d6aed726355}\label{structs21_1_1Cell_a117ec89a18b799a955c40d6aed726355}} 
+void {\bfseries Remove\+Path\+Cell} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a35fb51ef1e3b6d8f3866ca137ebfd3d6}\label{structs21_1_1Cell_a35fb51ef1e3b6d8f3866ca137ebfd3d6}} 
+void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a9b7e35b012a00c111c5a7d22defaa440}\label{structs21_1_1Cell_a9b7e35b012a00c111c5a7d22defaa440}} 
+void {\bfseries Finish} ()
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a167b413351c4c9b6e712ab5dedbb70e5}\label{structs21_1_1Cell_a167b413351c4c9b6e712ab5dedbb70e5}} 
+void {\bfseries Remove\+All\+Walls} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_aca103aa3d5a6cf3f3a1b7bc34eb46fed}\label{structs21_1_1Cell_aca103aa3d5a6cf3f3a1b7bc34eb46fed}} 
+size\+\_\+t {\bfseries sets\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_aa5904ed1573324f951faf463ea3b6373}\label{structs21_1_1Cell_aa5904ed1573324f951faf463ea3b6373}} 
+bool {\bfseries right\+\_\+wall\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_ae33d61d65f8a6323b7df11395d0ed3c1}\label{structs21_1_1Cell_ae33d61d65f8a6323b7df11395d0ed3c1}} 
+bool {\bfseries bottom\+\_\+wall\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a91d23fbafde316c4df7274edbc9921aa}\label{structs21_1_1Cell_a91d23fbafde316c4df7274edbc9921aa}} 
+bool {\bfseries part\+\_\+of\+\_\+path\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a722ae5238adc590af8c4985dbbb2594e}\label{structs21_1_1Cell_a722ae5238adc590af8c4985dbbb2594e}} 
+int {\bfseries path\+\_\+val\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a75491d6a6a277227404123780d5f92ce}\label{structs21_1_1Cell_a75491d6a6a277227404123780d5f92ce}} 
+bool {\bfseries start\+\_\+}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a4710640a9877a1b4f77c0491a86edb93}\label{structs21_1_1Cell_a4710640a9877a1b4f77c0491a86edb93}} 
+bool {\bfseries finish\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structs21_1_1Cell_a0892ae1f0d97dcf14ea1dab1f530237a}\label{structs21_1_1Cell_a0892ae1f0d97dcf14ea1dab1f530237a}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{structs21_1_1Cell}{Cell}} cell)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classs21_1_1Maze}{Maze}} cell structure. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/model/maze/maze.\+h\end{DoxyCompactItemize}

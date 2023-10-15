@@ -1,0 +1,106 @@
+\hypertarget{classs21_1_1Controller}{}\doxysection{s21\+::Controller Class Reference}
+\label{classs21_1_1Controller}\index{s21::Controller@{s21::Controller}}
+
+
+The base class of controller.  
+
+
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classs21_1_1Controller_adad12a4079b47ab0f50df646002583df}{Create\+Maze}} (size\+\_\+t height, size\+\_\+t width)
+\item 
+void \mbox{\hyperlink{classs21_1_1Controller_a289a279aad92b2cc221c36e3d03ae7de}{Create\+Maze}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classs21_1_1Controller_a99614b4e5fa16e960389877024339041}{Build\+Route}} (size\+\_\+t start\+\_\+cell\+\_\+y, size\+\_\+t start\+\_\+cell\+\_\+x, size\+\_\+t finish\+\_\+cell\+\_\+y, size\+\_\+t finish\+\_\+cell\+\_\+x)
+\item 
+void \mbox{\hyperlink{classs21_1_1Controller_a4da873e42696571f7ba67999c853a374}{Save\+Maze}} (std\+::string path)
+\item 
+size\+\_\+t \mbox{\hyperlink{classs21_1_1Controller_a474cad6e486d84135417b6234e064c6d}{Maze\+Height}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classs21_1_1Controller_a7c85b8bfd6483c930470137d5699d86f}{Maze\+Width}} ()
+\item 
+Matrix$<$ \mbox{\hyperlink{structs21_1_1Cell}{Cell}} $>$ \& \mbox{\hyperlink{classs21_1_1Controller_a2252d5da6a58161371a3aaea8a3afab4}{Maze\+Matrix}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structs21_1_1PathSignCell}{Path\+Sign\+Cell}} $>$ \& \mbox{\hyperlink{classs21_1_1Controller_a1535bbeed5224bc990460a9c99535656}{Path\+Cell\+Array}} ()
+\item 
+bool \mbox{\hyperlink{classs21_1_1Controller_a8c039471a9ad7ddfd708cf1f23e2b67e}{Maze\+Generated}} () const noexcept
+\item 
+void \mbox{\hyperlink{classs21_1_1Controller_ae4f301751b1d6aa774ec3025b2aa19d9}{Clear}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class of controller. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classs21_1_1Controller_a99614b4e5fa16e960389877024339041}\label{classs21_1_1Controller_a99614b4e5fa16e960389877024339041}} 
+\index{s21::Controller@{s21::Controller}!BuildRoute@{BuildRoute}}
+\index{BuildRoute@{BuildRoute}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{BuildRoute()}{BuildRoute()}}
+{\footnotesize\ttfamily void s21\+::\+Controller\+::\+Build\+Route (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{start\+\_\+cell\+\_\+y,  }\item[{size\+\_\+t}]{start\+\_\+cell\+\_\+x,  }\item[{size\+\_\+t}]{finish\+\_\+cell\+\_\+y,  }\item[{size\+\_\+t}]{finish\+\_\+cell\+\_\+x }\end{DoxyParamCaption})}
+
+Build a route according to given coordinates. \mbox{\Hypertarget{classs21_1_1Controller_ae4f301751b1d6aa774ec3025b2aa19d9}\label{classs21_1_1Controller_ae4f301751b1d6aa774ec3025b2aa19d9}} 
+\index{s21::Controller@{s21::Controller}!Clear@{Clear}}
+\index{Clear@{Clear}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void s21\+::\+Controller\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cleaning matrices. \mbox{\Hypertarget{classs21_1_1Controller_adad12a4079b47ab0f50df646002583df}\label{classs21_1_1Controller_adad12a4079b47ab0f50df646002583df}} 
+\index{s21::Controller@{s21::Controller}!CreateMaze@{CreateMaze}}
+\index{CreateMaze@{CreateMaze}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{CreateMaze()}{CreateMaze()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void s21\+::\+Controller\+::\+Create\+Maze (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{width }\end{DoxyParamCaption})}
+
+Generate a random maze based on a given height and width. \mbox{\Hypertarget{classs21_1_1Controller_a289a279aad92b2cc221c36e3d03ae7de}\label{classs21_1_1Controller_a289a279aad92b2cc221c36e3d03ae7de}} 
+\index{s21::Controller@{s21::Controller}!CreateMaze@{CreateMaze}}
+\index{CreateMaze@{CreateMaze}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{CreateMaze()}{CreateMaze()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void s21\+::\+Controller\+::\+Create\+Maze (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Generate a maze obtained from a file at a given path. \mbox{\Hypertarget{classs21_1_1Controller_a8c039471a9ad7ddfd708cf1f23e2b67e}\label{classs21_1_1Controller_a8c039471a9ad7ddfd708cf1f23e2b67e}} 
+\index{s21::Controller@{s21::Controller}!MazeGenerated@{MazeGenerated}}
+\index{MazeGenerated@{MazeGenerated}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{MazeGenerated()}{MazeGenerated()}}
+{\footnotesize\ttfamily bool s21\+::\+Controller\+::\+Maze\+Generated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Was it possible to generate maze. \mbox{\Hypertarget{classs21_1_1Controller_a474cad6e486d84135417b6234e064c6d}\label{classs21_1_1Controller_a474cad6e486d84135417b6234e064c6d}} 
+\index{s21::Controller@{s21::Controller}!MazeHeight@{MazeHeight}}
+\index{MazeHeight@{MazeHeight}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{MazeHeight()}{MazeHeight()}}
+{\footnotesize\ttfamily size\+\_\+t s21\+::\+Controller\+::\+Maze\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to maze height. \mbox{\Hypertarget{classs21_1_1Controller_a2252d5da6a58161371a3aaea8a3afab4}\label{classs21_1_1Controller_a2252d5da6a58161371a3aaea8a3afab4}} 
+\index{s21::Controller@{s21::Controller}!MazeMatrix@{MazeMatrix}}
+\index{MazeMatrix@{MazeMatrix}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{MazeMatrix()}{MazeMatrix()}}
+{\footnotesize\ttfamily Matrix$<$ \mbox{\hyperlink{structs21_1_1Cell}{Cell}} $>$ \& s21\+::\+Controller\+::\+Maze\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to maze final matrix. \mbox{\Hypertarget{classs21_1_1Controller_a7c85b8bfd6483c930470137d5699d86f}\label{classs21_1_1Controller_a7c85b8bfd6483c930470137d5699d86f}} 
+\index{s21::Controller@{s21::Controller}!MazeWidth@{MazeWidth}}
+\index{MazeWidth@{MazeWidth}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{MazeWidth()}{MazeWidth()}}
+{\footnotesize\ttfamily size\+\_\+t s21\+::\+Controller\+::\+Maze\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to maze width. \mbox{\Hypertarget{classs21_1_1Controller_a1535bbeed5224bc990460a9c99535656}\label{classs21_1_1Controller_a1535bbeed5224bc990460a9c99535656}} 
+\index{s21::Controller@{s21::Controller}!PathCellArray@{PathCellArray}}
+\index{PathCellArray@{PathCellArray}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{PathCellArray()}{PathCellArray()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structs21_1_1PathSignCell}{Path\+Sign\+Cell}} $>$ \& s21\+::\+Controller\+::\+Path\+Cell\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Access to a vector containing all the cells that belong to the constructed route. \mbox{\Hypertarget{classs21_1_1Controller_a4da873e42696571f7ba67999c853a374}\label{classs21_1_1Controller_a4da873e42696571f7ba67999c853a374}} 
+\index{s21::Controller@{s21::Controller}!SaveMaze@{SaveMaze}}
+\index{SaveMaze@{SaveMaze}!s21::Controller@{s21::Controller}}
+\doxysubsubsection{\texorpdfstring{SaveMaze()}{SaveMaze()}}
+{\footnotesize\ttfamily void s21\+::\+Controller\+::\+Save\+Maze (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+Save the generated maze to a file at the specified path. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/controller/controller.\+h\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/controller/controller.\+cc\end{DoxyCompactItemize}

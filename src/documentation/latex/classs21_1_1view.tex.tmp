@@ -1,0 +1,93 @@
+\hypertarget{classs21_1_1view}{}\doxysection{s21\+::view Class Reference}
+\label{classs21_1_1view}\index{s21::view@{s21::view}}
+
+
+The base class of view.  
+
+
+
+
+{\ttfamily \#include $<$view.\+h$>$}
+
+
+
+Inheritance diagram for s21\+::view\+:
+% FIG 0
+
+
+Collaboration diagram for s21\+::view\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classs21_1_1view_afe5e588bb4f8cc09250effda97780bd3}\label{classs21_1_1view_afe5e588bb4f8cc09250effda97780bd3}} 
+{\bfseries view} (QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{classs21_1_1view_ad70120127f92ce038fb907258b48956f}{Scene\+Init}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_a2caf8048e5dd48981d7908d0feb929eb}{Draw}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_a0a61395e7c8c7b043326e5174ff7a531}{Config\+Maze\+Draw}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_a32a216a58a7626fa66da95f14f21fb8d}{Slot\+Connect}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_a3498a006afc382b4cfffbb090204b062}{Buttons\+Init}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_aeee112dee466eb9373dd9accec15eafc}{Build\+Route}} ()
+\item 
+void \mbox{\hyperlink{classs21_1_1view_aa05bf21347c0f91733bcba37cd72c554}{Draw\+Scene\+Background}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class of view. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classs21_1_1view_aeee112dee466eb9373dd9accec15eafc}\label{classs21_1_1view_aeee112dee466eb9373dd9accec15eafc}} 
+\index{s21::view@{s21::view}!BuildRoute@{BuildRoute}}
+\index{BuildRoute@{BuildRoute}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{BuildRoute()}{BuildRoute()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Build\+Route (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generate a route using the coordinates specified on the spinboxes. \mbox{\Hypertarget{classs21_1_1view_a3498a006afc382b4cfffbb090204b062}\label{classs21_1_1view_a3498a006afc382b4cfffbb090204b062}} 
+\index{s21::view@{s21::view}!ButtonsInit@{ButtonsInit}}
+\index{ButtonsInit@{ButtonsInit}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{ButtonsInit()}{ButtonsInit()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Buttons\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pre-\/setting buttons. \mbox{\Hypertarget{classs21_1_1view_a0a61395e7c8c7b043326e5174ff7a531}\label{classs21_1_1view_a0a61395e7c8c7b043326e5174ff7a531}} 
+\index{s21::view@{s21::view}!ConfigMazeDraw@{ConfigMazeDraw}}
+\index{ConfigMazeDraw@{ConfigMazeDraw}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{ConfigMazeDraw()}{ConfigMazeDraw()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Config\+Maze\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Setting up maze parameters. \mbox{\Hypertarget{classs21_1_1view_a2caf8048e5dd48981d7908d0feb929eb}\label{classs21_1_1view_a2caf8048e5dd48981d7908d0feb929eb}} 
+\index{s21::view@{s21::view}!Draw@{Draw}}
+\index{Draw@{Draw}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classs21_1_1Maze}{Maze}} drawing. \mbox{\Hypertarget{classs21_1_1view_aa05bf21347c0f91733bcba37cd72c554}\label{classs21_1_1view_aa05bf21347c0f91733bcba37cd72c554}} 
+\index{s21::view@{s21::view}!DrawSceneBackground@{DrawSceneBackground}}
+\index{DrawSceneBackground@{DrawSceneBackground}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{DrawSceneBackground()}{DrawSceneBackground()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Draw\+Scene\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Drawing the scene widget background. \mbox{\Hypertarget{classs21_1_1view_ad70120127f92ce038fb907258b48956f}\label{classs21_1_1view_ad70120127f92ce038fb907258b48956f}} 
+\index{s21::view@{s21::view}!SceneInit@{SceneInit}}
+\index{SceneInit@{SceneInit}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{SceneInit()}{SceneInit()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Scene\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pre-\/setting widget window settings. \mbox{\Hypertarget{classs21_1_1view_a32a216a58a7626fa66da95f14f21fb8d}\label{classs21_1_1view_a32a216a58a7626fa66da95f14f21fb8d}} 
+\index{s21::view@{s21::view}!SlotConnect@{SlotConnect}}
+\index{SlotConnect@{SlotConnect}!s21::view@{s21::view}}
+\doxysubsubsection{\texorpdfstring{SlotConnect()}{SlotConnect()}}
+{\footnotesize\ttfamily void s21\+::view\+::\+Slot\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Some button connection. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/view/mainwindow/view.\+h\item 
+/home/julieanb/\+WORKSPACE/ghub/\+Maze/src/view/mainwindow/view.\+cc\end{DoxyCompactItemize}
