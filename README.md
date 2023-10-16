@@ -45,7 +45,7 @@ Generating random maze 10x10.
 
 ![img](misc/3.png)
 
-Generating random maze 10x10. Search for a route using specified coordinates.
+Generating random maze 50x50. Search for a route using specified coordinates.
 
 ### --III--
 
