@@ -11,6 +11,14 @@ APPNAME=Maze
 ARCHIVE=Archive_Maze
 DOC_PATH=documentation
 
+ifeq ($(OS), Darwin)
+TEMP_NAME=view.app
+EXEC_OPEN=open ./$(APPNAME)
+else
+TEMP_NAME=view
+EXEC_OPEN=./$(APPNAME)
+endif
+
 all: gcov_report
 
 test: clean
@@ -36,8 +44,8 @@ valgrind: test
 
 install:
 	mkdir build
-	cd view && qmake && make && make clean && rm Makefile && mv view ../build
-	cd build && mv view $(APPNAME)
+	cd view && qmake && make && make clean && rm Makefile && mv $(TEMP_NAME) ../build
+	cd build && mv $(TEMP_NAME) $(APPNAME) && $(EXEC_OPEN)
 
 uninstall:
 	rm -rf build
